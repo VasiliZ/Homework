@@ -1,7 +1,9 @@
 package com.github.vasiliz.myapplication;
 
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,5 +16,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public View findViewById(@IdRes int id) {
+        return super.findViewById(id);
     }
 }
